@@ -1,7 +1,19 @@
-diff -Nru xteddy-2.0.1/Makefile.am xteddy-2.0.1.new/Makefile.am
---- xteddy-2.0.1/Makefile.am	Thu Aug  3 08:54:25 2000
-+++ xteddy-2.0.1.new/Makefile.am	Thu Aug  3 08:55:39 2000
-@@ -3,15 +3,18 @@
+diff -Nur old/images/Makefile.am new/images/Makefile.am
+--- old/images/Makefile.am	2003-06-30 07:25:56.000000000 +0000
++++ new/images/Makefile.am	2003-11-05 00:41:01.000000000 +0000
+@@ -1,7 +1,7 @@
+ # GPL (C) 1998 Andreas Tille
+ #   tille@debian.org
+ 
+-pixmapdir = $(prefix)/share/xteddy
++pixmapdir = @datadir@/pixmaps/xteddy
+ 
+ pixmap_DATA = teddy.png xteddy.png xpenguin.png xduck.png xtuxxy.png \
+               xalex.png xbobo.png xklitze.png xruessel.png xnamu.png xbrummi.png \
+diff -Nur old/Makefile.am new/Makefile.am
+--- old/Makefile.am	2003-06-30 06:50:08.000000000 +0000
++++ new/Makefile.am	2003-11-05 00:27:15.000000000 +0000
+@@ -3,16 +3,19 @@
  bin_PROGRAMS = xteddy
  
  xteddy_SOURCES = xteddy.c
@@ -10,7 +22,7 @@ diff -Nru xteddy-2.0.1/Makefile.am xteddy-2.0.1.new/Makefile.am
  LIBS = `imlib-config --libs`
 +INCLUDES = `imlib-config --cflags`
 +
- man_MANS = xteddy.1
+ man_MANS = xteddy.6
 -bin_SCRIPTS = xtoys xteddy_test
  
 -DEFS = -DPIXMAP_PATH=\"@PIXMAP_PATH@\" -Wall
@@ -19,20 +31,10 @@ diff -Nru xteddy-2.0.1/Makefile.am xteddy-2.0.1.new/Makefile.am
  SUBDIRS = html images
 -EXTRA_DIST = $(man_MANS)  $(bin_SCRIPTS) \
 -             README xteddy.README xtuxxy.credit \
+-	     configure autogen.sh              
 +
-+EXTRA_DIST = README xteddy.README xtuxxy.credit \
- 	     configure autogen.sh              
++EXTRA_DIST = README xteddy.README xtuuxxy.credit \
++	     configure autogen.sh
   
  
-diff -Nru xteddy-2.0.1/images/Makefile.am xteddy-2.0.1.new/images/Makefile.am
---- xteddy-2.0.1/images/Makefile.am	Mon Aug  2 08:01:49 1999
-+++ xteddy-2.0.1.new/images/Makefile.am	Thu Aug  3 08:55:10 2000
-@@ -1,7 +1,7 @@
- # GPL (C) 1998 Andreas Tille
- #   tille@physik.uni-halle.de
  
--pixmapdir = $(prefix)/share/xteddy
-+pixmapdir = @datadir@/pixmaps/xteddy
- 
- pixmap_DATA = teddy.png xteddy.png xpenguin.png xduck.png xtuxxy.png \
-               xalex.png xbobo.png xklitze.png xruessel.png xnamu.png xbrummi.png \
