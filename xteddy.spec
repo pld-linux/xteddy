@@ -43,7 +43,7 @@ automake -a -c -f
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__install} -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements/
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements/
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
