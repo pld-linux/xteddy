@@ -33,21 +33,20 @@ przecie¿ wszyscy kochamy pluszowe misie, prawda?
 %patch -p1
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure 
 %{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT 
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT 
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	{AUTHORS,README,xteddy.README}
+gzip -9nf AUTHORS README xteddy.README
 
 %files
 %defattr(644,root,root,755)
-%doc {AUTHORS,README,xteddy.README}.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/xteddy
 %{_datadir}/pixmaps/xteddy
 %{_mandir}/man1/*
