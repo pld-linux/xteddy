@@ -2,10 +2,9 @@
 Name=xteddy
 Name[pl]=xteddy
 Comment=xteddy is a cuddly teddy bear
-Comment[pl]=xteddy to kochany pluszowy mi¶
+Comment[pl]=xteddy to kochany pluszowy miś
 Icon=
 Exec=xteddy
 Terminal=0
 Type=Application
-
 # vi: encoding=utf-8
