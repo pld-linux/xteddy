@@ -23,7 +23,7 @@ what teddy bears are for. Look at him, talk to him, place heavy
 windows on top of him, zap him around until he becomes dizzy, do what
 you like; he will always be your true (albeit virtual) friend.
 
-%description -l pl 
+%description -l pl
 Zwykle xteddy siedzi sobie nic nie robi±c, od tego w koñcu s± pluszowe
 misie. Spójrz czasem na niego, zagadaj, przykryj ciep³ym okienkiem,
 pobujaj (a¿ mu siê w g³owie zakrêci). S³owem: pobaw siê z nim,
@@ -38,15 +38,15 @@ rm -f missing
 aclocal
 autoconf
 automake -a -c
-%configure 
-%{__make} 
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__install} -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements/
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT 
+	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements/
 
