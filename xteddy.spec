@@ -60,7 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README xteddy.README
 %attr(755,root,root) %{_bindir}/xteddy
-%dir %{_pixmapsdir}/%{name}/icons
 %{_mandir}/man6/*
 %{_applnkdir}/Amusements/*
 %{_pixmapsdir}/*
