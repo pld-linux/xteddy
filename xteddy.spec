@@ -36,8 +36,8 @@ przecie¿ wszyscy kochamy pluszowe misie, prawda?
 %build
 rm -f missing
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
