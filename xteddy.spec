@@ -16,7 +16,6 @@ BuildRequires:	automake
 BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Normally, xteddy just sits around doing nothing. After all, that's
 what teddy bears are for. Look at him, talk to him, place heavy
@@ -43,14 +42,16 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements/
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements/
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
@@ -59,6 +60,3 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 %{_mandir}/man1/*
 %{_applnkdir}/Amusements/*
 %{_pixmapsdir}/*
-
-%clean
-rm -rf $RPM_BUILD_ROOT
