@@ -5,8 +5,6 @@ Version:	2.0.1
 Release:	4
 License:	GPL
 Group:		X11/Applications/Games
-Group(de):	X11/Applikationen/Spiele
-Group(pl):	X11/Aplikacje/Gry
 Source0:	http://www.ITN.LiU.SE/~stegu/xteddy/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-automake.patch
