@@ -2,14 +2,13 @@ Summary:	xteddy is a cuddly teddy bear for your X Window desktop
 Summary(pl):	xteddy to kochany pluszowy mi¶. Spotkasz go pod Xsami
 Name:		xteddy
 Version:	2.0.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Games
 Group(pl):	X11/Gry
 Source0:	http://www.ITN.LiU.SE/~stegu/xteddy/%{name}-%{version}.tar.gz
 Patch0:		%{name}-automake.patch
 URL:		http://www.ITN.LiU.SE/~stegu/xteddy/xteddy_info.html
-BuildRequires:	automake
 BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
