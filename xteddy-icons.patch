@@ -1,0 +1,12 @@
+diff -Nur old/images/Makefile.am new/images/Makefile.am
+--- old/images/Makefile.am	2003-11-05 00:41:01.000000000 +0000
++++ new/images/Makefile.am	2003-11-05 00:51:57.000000000 +0000
+@@ -5,7 +5,6 @@
+ 
+ pixmap_DATA = teddy.png xteddy.png xpenguin.png xduck.png xtuxxy.png \
+               xalex.png xbobo.png xklitze.png xruessel.png xnamu.png xbrummi.png \
+-	      xorca.png \
+-	      icons
++	      xorca.png
+ 
+ EXTRA_DIST = $(pixmap_DATA)
