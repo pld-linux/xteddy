@@ -1,15 +1,16 @@
 Summary:	xteddy is a cuddly teddy bear for your X Window desktop
 Summary(pl):	xteddy to kochany pluszowy mi¶, którego spotkasz pod X Window
 Name:		xteddy
-Version:	2.0.1
-Release:	5
+Version:	2.0.2
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://www.ITN.LiU.SE/~stegu/xteddy/%{name}-%{version}.tar.gz
-# Source0-md5:	d33bfe05f18259a3f7fd17ae256c5644
+# Source0-md5:	c197253b5116db5dc4e32b58dd36160e
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-automake.patch
+Patch1:		%{name}-icons.patch
 URL:		http://www.ITN.LiU.SE/~stegu/xteddy/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -30,7 +31,8 @@ przecie¿ wszyscy kochamy pluszowe misie, prawda?
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
@@ -42,13 +44,14 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Amusements,%{_pixmapsdir}/%{name}/icons}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+install images/icons/* $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}/icons
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -57,6 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README xteddy.README
 %attr(755,root,root) %{_bindir}/xteddy
-%{_mandir}/man1/*
+%dir %{_pixmapsdir}/%{name}/icons
+%{_mandir}/man6/*
 %{_applnkdir}/Amusements/*
 %{_pixmapsdir}/*
