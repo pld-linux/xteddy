@@ -1,0 +1,38 @@
+diff -Nru xteddy-2.0.1/Makefile.am xteddy-2.0.1.new/Makefile.am
+--- xteddy-2.0.1/Makefile.am	Thu Aug  3 08:54:25 2000
++++ xteddy-2.0.1.new/Makefile.am	Thu Aug  3 08:55:39 2000
+@@ -3,15 +3,18 @@
+ bin_PROGRAMS = xteddy
+ 
+ xteddy_SOURCES = xteddy.c
++
++DEFS = -DPIXMAP_PATH=\"@datadir@/pixmaps/xteddy\" -Wall
+ LIBS = `imlib-config --libs`
++INCLUDES = `imlib-config --cflags`
++
+ man_MANS = xteddy.1
+-bin_SCRIPTS = xtoys xteddy_test
+ 
+-DEFS = -DPIXMAP_PATH=\"@PIXMAP_PATH@\" -Wall
++bin_SCRIPTS = xtoys xteddy_test
+ 
+ SUBDIRS = html images
+-EXTRA_DIST = $(man_MANS)  $(bin_SCRIPTS) \
+-             README xteddy.README xtuxxy.credit \
++
++EXTRA_DIST = README xteddy.README xtuxxy.credit \
+ 	     configure autogen.sh              
+  
+ 
+diff -Nru xteddy-2.0.1/images/Makefile.am xteddy-2.0.1.new/images/Makefile.am
+--- xteddy-2.0.1/images/Makefile.am	Mon Aug  2 08:01:49 1999
++++ xteddy-2.0.1.new/images/Makefile.am	Thu Aug  3 08:55:10 2000
+@@ -1,7 +1,7 @@
+ # GPL (C) 1998 Andreas Tille
+ #   tille@physik.uni-halle.de
+ 
+-pixmapdir = $(prefix)/share/xteddy
++pixmapdir = @datadir@/pixmaps/xteddy
+ 
+ pixmap_DATA = teddy.png xteddy.png xpenguin.png xduck.png xtuxxy.png \
+               xalex.png xbobo.png xklitze.png xruessel.png xnamu.png xbrummi.png \
