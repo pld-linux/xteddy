@@ -8,7 +8,7 @@ Group:		X11/Games
 Group(pl):	X11/Gry
 Source0:	http://www.ITN.LiU.SE/~stegu/xteddy/%{name}-%{version}.tar.gz
 Patch0:		%{name}-automake.patch
-URL:		http://www.ITN.LiU.SE/~stegu/xteddy/xteddy_info.html
+URL:		http://www.ITN.LiU.SE/~stegu/xteddy/
 BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -47,7 +47,7 @@ gzip -9nf AUTHORS README xteddy.README
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/xteddy
-%{_datadir}/pixmaps/xteddy
+%{_pixmapsdir}/xteddy
 %{_mandir}/man1/*
 
 %clean
