@@ -2,11 +2,12 @@ Summary:	xteddy is a cuddly teddy bear for your X Window desktop
 Summary(pl):	xteddy to kochany pluszowy mi¶, którego spotkasz pod X Window
 Name:		xteddy
 Version:	2.0.1
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://www.ITN.LiU.SE/~stegu/xteddy/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+Source2:	%{name}.png
 Patch0:		%{name}-automake.patch
 URL:		http://www.ITN.LiU.SE/~stegu/xteddy/
 BuildRequires:	autoconf
@@ -49,16 +50,16 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements/
 	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements/
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
-gzip -9nf AUTHORS README xteddy.README
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS README xteddy.README
 %attr(755,root,root) %{_bindir}/xteddy
-%{_applnkdir}/Amusements/*
-%{_pixmapsdir}/xteddy
 %{_mandir}/man1/*
+%{_applnkdir}/Amusements/*
+%{_pixmapsdir}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
