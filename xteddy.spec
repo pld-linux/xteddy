@@ -9,6 +9,8 @@ Group(pl):	X11/Gry
 Source0:	http://www.ITN.LiU.SE/~stegu/xteddy/%{name}-%{version}.tar.gz
 Patch0:		%{name}-automake.patch
 URL:		http://www.ITN.LiU.SE/~stegu/xteddy/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,6 +34,9 @@ przecie¿ wszyscy kochamy pluszowe misie, prawda?
 %patch -p1
 
 %build
+aclocal
+autoconf
+automake -a -c
 %configure 
 %{__make} 
 
