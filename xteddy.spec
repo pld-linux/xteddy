@@ -61,5 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README xteddy.README
 %attr(755,root,root) %{_bindir}/xteddy
 %{_mandir}/man6/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
