@@ -1,5 +1,5 @@
 Summary:	xteddy is a cuddly teddy bear for your X Window desktop
-Summary(pl.UTF-8):   xteddy to kochany pluszowy miś, którego spotkasz pod X Window
+Summary(pl.UTF-8):	xteddy to kochany pluszowy miś, którego spotkasz pod X Window
 Name:		xteddy
 Version:	2.0.2
 Release:	2
