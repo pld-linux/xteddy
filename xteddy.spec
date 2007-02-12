@@ -1,5 +1,5 @@
 Summary:	xteddy is a cuddly teddy bear for your X Window desktop
-Summary(pl):	xteddy to kochany pluszowy mi¶, którego spotkasz pod X Window
+Summary(pl.UTF-8):   xteddy to kochany pluszowy miÅ›, ktÃ³rego spotkasz pod X Window
 Name:		xteddy
 Version:	2.0.2
 Release:	2
@@ -23,11 +23,11 @@ what teddy bears are for. Look at him, talk to him, place heavy
 windows on top of him, zap him around until he becomes dizzy, do what
 you like; he will always be your true (albeit virtual) friend.
 
-%description -l pl
-Zwykle xteddy siedzi sobie nic nie robi±c, od tego w koñcu s± pluszowe
-misie. Spójrz czasem na niego, zagadaj, przykryj ciep³ym okienkiem,
-pobujaj (a¿ mu siê w g³owie zakrêci). S³owem: pobaw siê z nim,
-przecie¿ wszyscy kochamy pluszowe misie, prawda?
+%description -l pl.UTF-8
+Zwykle xteddy siedzi sobie nic nie robiÄ…c, od tego w koÅ„cu sÄ… pluszowe
+misie. SpÃ³jrz czasem na niego, zagadaj, przykryj ciepÅ‚ym okienkiem,
+pobujaj (aÅ¼ mu siÄ™ w gÅ‚owie zakrÄ™ci). SÅ‚owem: pobaw siÄ™ z nim,
+przecieÅ¼ wszyscy kochamy pluszowe misie, prawda?
 
 %prep
 %setup -q
